@@ -35,7 +35,7 @@ export const getDataViaFiles = async (bankId: string) => {
         }  - ${docs[index].pageContent.replaceAll("\n", "")}`;
       }
       doc_data += "\n";
-      console.log(file, doc_data.length);
+      // console.log(file, doc_data.length);
 
       const { exec } = require("child_process");
       if (doc_data.length > 50000) {
@@ -48,7 +48,7 @@ export const getDataViaFiles = async (bankId: string) => {
                 .replaceAll(" ", "")
                 .split(".")[0]
                 .replaceAll("(", "")
-                .replaceAll(")", "")}AiModelFile${index + 1}`,
+                .replaceAll(")", "")}AiModelFile${index + 1}.txt`,
               create_model(doc_data.slice(index * 50000, (index + 1) * 50000))
             );
           } else {
@@ -57,31 +57,31 @@ export const getDataViaFiles = async (bankId: string) => {
                 .replaceAll(" ", "")
                 .split(".")[0]
                 .replaceAll("(", "")
-                .replaceAll(")", "")}AiModelFile${index + 1}`,
+                .replaceAll(")", "")}AiModelFile${index + 1}.txt`,
               create_model(doc_data.slice(index * 50000))
             );
           }
 
-          exec(
-            `ollama create ${file.filename
-              .replaceAll(" ", "")
-              .split(".")[0]
-              .replaceAll("(", "")
-              .replaceAll(")", "")}AiModelFile${
-              index + 1
-            } -f models/${bankId}_${file.filename
-              .replaceAll(" ", "")
-              .split(".")[0]
-              .replaceAll("(", "")
-              .replaceAll(")", "")}AiModelFile${index + 1}`,
-            (error: any, stdout: string, stderr: string) => {
-              if (error) {
-                console.error(error);
-                return;
-              }
-              console.log(stdout);
-            }
-          );
+          // exec(
+          //   `ollama create ${file.filename
+          //     .replaceAll(" ", "")
+          //     .split(".")[0]
+          //     .replaceAll("(", "")
+          //     .replaceAll(")", "")}AiModelFile${
+          //     index + 1
+          //   } -f models/${bankId}_${file.filename
+          //     .replaceAll(" ", "")
+          //     .split(".")[0]
+          //     .replaceAll("(", "")
+          //     .replaceAll(")", "")}AiModelFile${index + 1}`,
+          //   (error: any, stdout: string, stderr: string) => {
+          //     if (error) {
+          //       console.error(error);
+          //       return;
+          //     }
+          //     console.log(stdout);
+          //   }
+          // );
         }
       } else {
         let res = fs.writeFileSync(
@@ -89,30 +89,30 @@ export const getDataViaFiles = async (bankId: string) => {
             .replaceAll(" ", "")
             .split(".")[0]
             .replaceAll("(", "")
-            .replaceAll(")", "")}AiModelFile`,
+            .replaceAll(")", "")}AiModelFile.txt`,
           create_model(doc_data)
         );
 
         console.log(res);
 
-        exec(
-          `ollama create ${file.filename
-            .replaceAll(" ", "")
-            .split(".")[0]
-            .replaceAll("(", "")
-            .replaceAll(")", "")}AiModelFile -f models/${bankId}_${file.filename
-            .replaceAll(" ", "")
-            .split(".")[0]
-            .replaceAll("(", "")
-            .replaceAll(")", "")}AiModelFile`,
-          (error: any, stdout: string, stderr: string) => {
-            if (error) {
-              console.error(error);
-              return;
-            }
-            console.log(stdout);
-          }
-        );
+        // exec(
+        //   `ollama create ${file.filename
+        //     .replaceAll(" ", "")
+        //     .split(".")[0]
+        //     .replaceAll("(", "")
+        //     .replaceAll(")", "")}AiModelFile -f models/${bankId}_${file.filename
+        //     .replaceAll(" ", "")
+        //     .split(".")[0]
+        //     .replaceAll("(", "")
+        //     .replaceAll(")", "")}AiModelFile`,
+        //   (error: any, stdout: string, stderr: string) => {
+        //     if (error) {
+        //       console.error(error);
+        //       return;
+        //     }
+        //     console.log(stdout);
+        //   }
+        // );
       }
 
       // exec(

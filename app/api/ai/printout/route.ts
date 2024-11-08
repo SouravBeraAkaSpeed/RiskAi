@@ -3,6 +3,22 @@ import axios from "axios";
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 
+
+import {
+  GoogleGenerativeAI,
+  GenerateContentResult,
+} from "@google/generative-ai";
+import { PrintOutDataFormat } from "@/constant/riskAssesmentTableData";
+
+const apiKey = process.env.GOOGLE_GENAI_API_KEY;
+if (!apiKey) {
+  throw new Error(
+    "Missing Google Generative AI API key in environment variables."
+  );
+}
+// Instantiate the Google Generative AI client with your API key
+const genAI = new GoogleGenerativeAI(apiKey); // Replace with actual API key
+
 function wrapText(text: string, lineLength: number): string {
   const lines = text.split('\n');
   const wrappedLines = lines.map(line => {
@@ -38,18 +54,29 @@ export async function POST(req: NextRequest) {
     //   "Significant number of NRA accounts from higher-risk geographies.",}
     const body = await req.json();
 
-    const res = await axios.post("http://localhost:11434/api/generate", {
-      model: "AnalysisPrintOut",
-      prompt: body.prompt,
-      stream: false,
-      options: { num_ctx: 10000, temperature: 0 },
+    const systemInstruction = PrintOutDataFormat
+
+    // Initialize the Gemini model with the system instruction
+    const model = genAI.getGenerativeModel({
+      model: "gemini-1.5-flash",
+      systemInstruction,
     });
 
-    const data = await res.data;
-    const response = data.response;
+    const result: GenerateContentResult = await model.generateContent([body.prompt]);
+    const aiResponse = result?.response?.text() || "No response generated.";
+
+    // const res = await axios.post("http://localhost:11434/api/generate", {
+    //   model: "AnalysisPrintOut",
+    //   prompt: body.prompt,
+    //   stream: false,
+    //   options: { num_ctx: 10000, temperature: 0 },
+    // });
+
+    // const data = await res.data;
+    // const response = data.response;
 
 
-    saveFormattedTextToFile(`public/files/${body.bankName.replaceAll(" ", "")}_PrintOut.txt`, response);
+    saveFormattedTextToFile(`public/files/${body.bankName.replaceAll(" ", "")}_PrintOut.txt`, aiResponse);
 
     
 
@@ -87,7 +114,7 @@ export async function POST(req: NextRequest) {
     // doc.end();
     // console.log(data);
 
-    const r = NextResponse.json({ response });
+    const r = NextResponse.json({ aiResponse });
     r.headers.set("Access-Control-Allow-Origin", "http://localhost:3001");
     r.headers.set("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
     r.headers.set(

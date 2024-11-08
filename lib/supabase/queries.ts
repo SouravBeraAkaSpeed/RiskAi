@@ -123,8 +123,6 @@ export const createAndUpdateBank = async (
           },
         });
       }
-
-      
     }
     return { data: bankData, error: null };
   } catch (error: any) {
@@ -245,6 +243,7 @@ export const addCodes = async ({
 
 export const getCodesWithId = async (bankId: string) => {
   try {
+    await db.$connect();
     const codes = await db.code.findMany({
       where: {
         bankId: bankId,
@@ -271,6 +270,8 @@ export const getCodesWithId = async (bankId: string) => {
     }
   } catch (error) {
     console.log("[ERROR_GET_CODES_WITH_ID]", error);
+  } finally {
+    await db.$disconnect();
   }
 };
 

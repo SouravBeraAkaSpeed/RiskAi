@@ -11,7 +11,7 @@ import { Toaster } from "@/components/ui/toaster";
 const font = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Inherent Risk Ai",
+  title: " Risk Ai",
   description: "AI to predict the inherent risk of a customer",
 };
 

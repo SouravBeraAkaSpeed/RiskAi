@@ -14,34 +14,40 @@ export const create_prompt = (code: code, previous_analysis: string) => {
   );
 };
 
+// export const create_model = (context: string) => {
+//   return `FROM llama3
+//   TEMPLATE """
+
+//   {{ if .System }}<|start_header_id|>system<|end_header_id|>
+
+//   {{ .System }}<|eot_id|>{{ end }}{{ if .Prompt }}<|start_header_id|>prompt<|end_header_id|>
+
+//   {{ .Prompt }}<|eot_id|>{{ end }}<|start_header_id|>assistant<|end_header_id|>
+
+//   {{ .Response }}<|eot_id|>
+//   """
+
+//   SYSTEM """You are an Ai , whose job is to analyze the inherent risks of a banking system . First user_prompt given to you is the context of data that you will use to analyze the banking system and paired input will have information about the risk code that you have to analyze . Write a response that appropriately completes the request.  And while giving response don't provide any additional data, if the context doesn't have data reuired for analysis of code then simply say provided data is not suffiecient for this code analysis , And your response should contain Inherent Risk Category , Inherent Risk Score , Mitigating controls , mitigating control score , Document Name used for analysis , specific part of context used in analaysis and page Number of that specific part used.
+
+//   Context : {{${context}}}
+
+//   """
+
+//   # Set parameters
+
+//   PARAMETER stop "<|start_header_id|>"
+//   PARAMETER stop "<|end_header_id|>"
+//   PARAMETER stop "<|eot_id|>"
+//   PARAMETER num_predict 5000
+//   PARAMETER num_ctx 20000`;
+// };
+
 export const create_model = (context: string) => {
-  return `FROM llama3
-  TEMPLATE """
-  
-  {{ if .System }}<|start_header_id|>system<|end_header_id|>
-  
-  {{ .System }}<|eot_id|>{{ end }}{{ if .Prompt }}<|start_header_id|>prompt<|end_header_id|>
-  
-  {{ .Prompt }}<|eot_id|>{{ end }}<|start_header_id|>assistant<|end_header_id|>
-  
-  {{ .Response }}<|eot_id|>
-  """
-  
-  SYSTEM """You are an Ai , whose job is to analyze the inherent risks of a banking system . First user_prompt given to you is the context of data that you will use to analyze the banking system and paired input will have information about the risk code that you have to analyze . Write a response that appropriately completes the request.  And while giving response don't provide any additional data, if the context doesn't have data reuired for analysis of code then simply say provided data is not suffiecient for this code analysis , And your response should contain Inherent Risk Category , Inherent Risk Score , Mitigating controls , mitigating control score , Document Name used for analysis , specific part of context used in analaysis and page Number of that specific part used.
+  return `You are an Ai , whose job is to analyze the inherent risks of a banking system . First user_prompt given to you is the context of data that you will use to analyze the banking system and paired input will have information about the risk code that you have to analyze . Write a response that appropriately completes the request.  And while giving response don't provide any additional data, if the context doesn't have data reuired for analysis of code then simply say provided data is not suffiecient for this code analysis , And your response should contain Inherent Risk Category , Inherent Risk Score , Mitigating controls , mitigating control score , Document Name used for analysis , specific part of context used in analaysis and page Number of that specific part used.
   
   Context : {{${context}}}
-  
-  """
-  
-  # Set parameters
-  
-  PARAMETER stop "<|start_header_id|>"
-  PARAMETER stop "<|end_header_id|>"
-  PARAMETER stop "<|eot_id|>"
-  PARAMETER num_predict 5000
-  PARAMETER num_ctx 20000`;
+  `;
 };
-
 export const print_out_prompt_example = ` analysis of Code : Customer Base :  The inherent risk is moderate because the customer base is increasing due to branching, mergers, or acquisitions, and the customer base is regional. This could increase the likelihood of suspicious transactions. Additionally, the high-risk geographic locations (domestic and foreign) or a diverse metropolitan area where the bank operates may also contribute to the moderate inherent risk.However, the mitigating control score is high because the bank has a Customer Base risk category code that provides guidance on managing this type of risk. The code suggests that the bank should have processes in place for monitoring customer activity and identifying potential red flags or signs of money laundering. This suggests that the bank has taken steps to mitigate the risks associated with its increasing customer base.The specific part from Section 4.1 (Risk Assessment) is relevant because it shows that the bank has a process in place for assessing and managing risk, which could help identify and report suspicious transactions. analysis of Code : NRA Customers : The inherent risk is moderate because the bank has a significant number of NRA accounts from higher-risk geographies, which increases the likelihood of suspicious transactions. This could lead to potential money laundering or terrorist financing risks. However, the mitigating control score is high because the bank has implemented measures to identify and assess these risks through its Risk Management Framework. Specifically, Section 1.4 (Risk Assessment) outlines the process for identifying, assessing, and prioritizing risks, which includes monitoring customer activity and reporting suspicious transactions.The specific part from Section 1.4 (Risk Assessment) is relevant because it shows that the bank has a structured approach to risk management, which could help identify and mitigate potential risks associated with its NRA customers.analysis of Code : International accounts : The inherent risk is moderate because the code "IA" indicates that there are international accounts, which can increase the likelihood of suspicious transactions due to the complexity and anonymity associated with international transactions. Additionally, the description "Few interacnational accounts or very low volume of currency activity in the accounts." suggests that the bank may not have a significant presence in international markets, which could also contribute to the moderate risk level.The mitigating control score is high because the code "IA" indicates that there are international accounts, and the description suggests that the bank has some controls in place to monitor these accounts. The fact that the bank has an AML compliance program and independent review of the program by a third-party service provider (SIRS) also suggests that the bank has taken steps to mitigate the risks associated with its international accounts.The specific part from Section 1.2 (International accounts) is relevant because it highlights the importance of monitoring international transactions, which can help identify and report suspicious activities.Using the Above the risk code analysis write the Inherent Risk Analysis Report for Bank SOURAVBERA in the format given in the context.
 `;
 

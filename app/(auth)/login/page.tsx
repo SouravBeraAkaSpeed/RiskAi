@@ -45,7 +45,7 @@ const LoginPage = () => {
     console.log("out");
     if (!session) {
       form.reset();
-      setSubmitError("Error Occured while Logging!!");
+      setSubmitError("Error Occured while Logging , Check Your Email for Confirmation email!!");
     } else {
       router.replace("/");
     }
@@ -78,7 +78,7 @@ const LoginPage = () => {
             className="font-semibold
           dark:text-white text-2xl first-letter:ml-2"
           >
-            INHERENT RISK AI
+            RISK AI
           </span>
         </Link>
 

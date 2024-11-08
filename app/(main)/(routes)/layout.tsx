@@ -12,25 +12,27 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  
 
-  const bank = await db.bank.findFirst({
-    where: {
-      users: {
-        some: { email: user?.email },
+  try {
+    await db.$connect();
+    const bank = await db.bank.findFirst({
+      where: {
+        users: {
+          some: { email: user?.email },
+        },
       },
-    },
-  });
-  
-
-  return (
-    <div className=" flex-col">
-      <div className="flex w-full ">
-        <NavBar bankId={bank?.id} />
+    });
+    return (
+      <div className=" flex-col">
+        <div className="flex w-full ">
+          <NavBar bankId={bank?.id} />
+        </div>
+        <div className="flex flex-1 ">{children}</div>
       </div>
-      <div className="flex flex-1 ">{children}</div>
-    </div>
-  );
+    );
+  } finally {
+    await db.$disconnect();
+  }
 };
 
 export default Layout;

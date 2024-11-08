@@ -12,7 +12,7 @@ async function processFilesSequentially(
   for (const file of files) {
     try {
       const res = await axios.post("http://localhost:3000/api/ai/interface_testing", {
-        model: `${file}:latest`,
+        model: `${file}`,
         code: code,
         previous_analysis: previous_analysis ? previous_analysis : null,
         stream: false,
@@ -60,15 +60,15 @@ export const getAnalysis = async (bankId: string, code: code) => {
     return file.includes(bankId);
   });
 
-  const final_files = filter_files.map((file) => {
-    return file.replace(`${bankId}_`, "");
-  });
+  // const final_files = filter_files.map((file) => {
+  //   return file.replace(`${bankId}_`, "");
+  // });
 
   let previous_analysis: string = "";
 
   console.log("ANALYSING....");
   const res = await processFilesSequentially(
-    final_files,
+    filter_files,
     code,
     previous_analysis
   );
@@ -90,7 +90,7 @@ export const getAnalysis = async (bankId: string, code: code) => {
   const documentUsedForAnalysisRegex = /Document_used_for_analysis:\s*([^,]+)/;
   const documentUsedForAnalysisMatch = res.match(documentUsedForAnalysisRegex);
   const documentUsedForAnalysis = documentUsedForAnalysisMatch
-    ? documentUsedForAnalysisMatch[1].trim()
+    ? JSON.stringify(documentUsedForAnalysisMatch[1].trim())
     : null;
 
   // Extracting Reasoning

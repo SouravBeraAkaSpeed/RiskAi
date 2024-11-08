@@ -113,7 +113,7 @@ const Signup = () => {
             className="font-semibold
           dark:text-white text-2xl first-letter:ml-2"
           >
-            INHERENT RISK AI
+            RISK AI
           </span>
         </Link>
         <FormDescription

@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
     // console.log(data);
 
     const r = NextResponse.json({ response });
-    r.headers.set("Access-Control-Allow-Origin", "http://localhost:3001");
+    r.headers.set("Access-Control-Allow-Origin", "http://localhost:3000");
     r.headers.set("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
     r.headers.set(
       "Access-Control-Allow-Headers",
@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
 
 export const OPTIONS = () => {
   const response = NextResponse.json({});
-  response.headers.set("Access-Control-Allow-Origin", "http://localhost:3001");
+  response.headers.set("Access-Control-Allow-Origin", "http://localhost:3000");
   response.headers.set("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
   response.headers.set(
     "Access-Control-Allow-Headers",

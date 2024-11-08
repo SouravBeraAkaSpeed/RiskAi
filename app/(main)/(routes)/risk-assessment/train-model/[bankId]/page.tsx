@@ -81,7 +81,6 @@ const Page = ({
     index: number;
   }) => {
     setIsLoading(true);
-    
 
     const model_name = `${file.filename
       .replaceAll(" ", "")
@@ -121,8 +120,10 @@ const Page = ({
   const handleTraining = async () => {
     setIsTraining(true);
     await getDataViaFiles(params.bankId).then(() => {
-      setIsTraining(false);
-      setTraingingCompleted(true);
+      setTimeout(() => {
+        setIsTraining(false);
+        setTraingingCompleted(true);
+      }, 10000);
     });
   };
 

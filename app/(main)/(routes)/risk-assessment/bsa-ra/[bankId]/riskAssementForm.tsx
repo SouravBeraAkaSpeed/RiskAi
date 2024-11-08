@@ -167,7 +167,6 @@ const RiskAssementForm = ({
   const handleSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsProcessing(true);
     setMessage("Parsing Data...");
-    
 
     data = {
       codes: [],
@@ -235,7 +234,6 @@ const RiskAssementForm = ({
             });
             setIsProcessing(false);
             getBankData();
-            
           });
         } else {
           toast({
@@ -303,7 +301,10 @@ const RiskAssementForm = ({
               <TableBody>
                 {(banksData as bank)?.codes?.map((content, index) => (
                   <>
-                    <TableRow key={index} className="border-b-2 ">
+                    <TableRow
+                      key={index + content.code}
+                      className="border-b-2 "
+                    >
                       <TableCell className="align-top ">
                         <FormField
                           control={form.control}
@@ -524,7 +525,10 @@ const RiskAssementForm = ({
                     </TableRow>
 
                     {selectedRows.includes(content.code as never) && (
-                      <TableRow key={index} className="border-b-2 mx-10">
+                      <TableRow
+                        key={index + "sub_code"}
+                        className="border-b-2 mx-10"
+                      >
                         <TableCell colSpan={12} className="p-0">
                           <Table className="h-full overflow-scroll">
                             <TableHeader>
