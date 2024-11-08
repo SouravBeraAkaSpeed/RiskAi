@@ -56,9 +56,13 @@ Initialise Prisma with the following command:
 
 ### Run RiskAI:
 Start the Next.js app by running the main script:
-     ```bash
+   ```bash
     npm run dev
-      ```
+    
+   ```
+     
+      
+     
 
 ### Site URL:
 
