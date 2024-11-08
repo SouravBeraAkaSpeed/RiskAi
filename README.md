@@ -44,7 +44,7 @@ Follow these steps to set up and run RiskAI on your local machine.
 #### Create .env file:
 
 Create a .env file in the root directory of your project with the following format and get all the keys from Supabase and Gemini:
-    ```bio 
+    ```bash
     GOOGLE_GENAI_API_KEY=
     NEXT_PUBLIC_SUPABASE_USERNAME = 
     PW = 
