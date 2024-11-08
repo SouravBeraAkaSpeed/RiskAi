@@ -53,25 +53,23 @@ Follow these steps to set up and run RiskAI on your local machine.
     DATABASE_URL=
     ```
 
-#### Initialise Prisma:
-
+### Initialise Prisma:
 Initialise Prisma with the following command:
     ```bash
     npx prisma init
     npx prisma generate
     ```
 
-#### Run RiskAI:
-
+### Run RiskAI:
 Start the Next.js app by running the main script:
     ```bash
     npm run dev
     ```
 
-#### Site URL:
+### Site URL:
 The site will be available at [http://localhost:3000/](http://localhost:3000/).
 
-#### Login and Onboarding:
+### Login and Onboarding:
 - Go to the site and click on SignUp.
 - Enter the email and password.
 - After the email verification, go to login.
@@ -81,20 +79,20 @@ The site will be available at [http://localhost:3000/](http://localhost:3000/).
 - Upload the files related to the bank.
 - After the upload, you will be redirected to the dashboard.
 
-#### Train Your Model:
+### Train Your Model:
 - Go to the dashboard and go to the Train Model Section.
 - Upload more files if needed.
 - Click on the Train Model button.
 - It will take 15 seconds to 1 minute to train the model depending on the size of the files.
 
-#### View Codes on the Site
+### View Codes on the Site
 - In the "Manage Code" section, you can view all the codes and their respective descriptions and criteria.
 
-#### Go to BSA-RSA
+### Go to BSA-RSA
 - In the BSA-RSA section, you can view all the BSA-RSA codes and their respective descriptions and criteria.
 - Then just select the code you want to analyze the risk for and click on the submit button.
 
-#### View Results:
+### View Results:
 
 - RiskAI will output the inherent risk, mitigation measures, residual risk, and improvement recommendations.
 - Go to the "Print Report" section to analyze the overall bank risk and print the report.
