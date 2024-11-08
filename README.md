@@ -42,22 +42,23 @@ Follow these steps to set up and run RiskAI on your local machine.
 - Collect all relevant banking documents that need to be analyzed. These could include risk assessments, financial statements, compliance records, etc.
 - Ensure files are in a format supported by RiskAI (e.g., PDF, DOCX, or plain text).
 
-**Create .env file**: Create a `.env` file in the root directory of your project with the same format given in config_example.env and get all the keys from Supabase and Gemini:
+**Create .env file**:
+
+-Create a `.env` file in the root directory of your project with the same format given in config_example.env and get all the keys from Supabase and Gemini:
 
 ### Initialise Prisma:
 
 Initialise Prisma with the following command:
-`bash
+    ```bash
     npx prisma init
     npx prisma generate
-    `
+    ```
 
 ### Run RiskAI:
-
 Start the Next.js app by running the main script:
-`bash
-    npm run dev
-    `
+    ```bash
+        npm run dev
+        ```
 
 ### Site URL:
 
