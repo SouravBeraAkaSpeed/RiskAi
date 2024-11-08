@@ -35,15 +35,13 @@ Follow these steps to set up and run RiskAI on your local machine.
 
 ### Usage
 
-#### Prepare Data:
+**Prepare Data**:
 
 - Collect all relevant banking documents that need to be analyzed. These could include risk assessments, financial statements, compliance records, etc.
 - Ensure files are in a format supported by RiskAI (e.g., PDF, DOCX, or plain text).
 
 
-#### Create .env file:
-
-Create a .env file in the root directory of your project with the following format and get all the keys from Supabase and Gemini:
+**Create .env file**: Create a .env file in the root directory of your project with the following format and get all the keys from Supabase and Gemini:
     ```bash
     GOOGLE_GENAI_API_KEY=
     NEXT_PUBLIC_SUPABASE_USERNAME = 
@@ -58,6 +56,7 @@ Create a .env file in the root directory of your project with the following form
 
 
 ####  Initialise Prisma:
+
 Initialise Prisma with the following command:
     ```bash
    npx prisma init
