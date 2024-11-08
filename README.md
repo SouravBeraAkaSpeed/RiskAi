@@ -22,15 +22,16 @@ Follow these steps to set up and run RiskAI on your local machine.
 ### Installation
 
 1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/SouravBeraAkaSpeed/RiskAi
-    cd riskai
-    ```
+   ```bash
+   git clone https://github.com/SouravBeraAkaSpeed/RiskAi
+   cd riskai
+   ```
 2. **Install Dependencies**: Install the required Python and node packages with:
-    ```bash
-    npm i --legacy-peer-deps
-    pip install -r requirements.txt
-    ```
+
+   ```bash
+   npm i --legacy-peer-deps
+   pip install -r requirements.txt
+   ```
 
 3. **Get the API keys**: Get all the API keys mentioned in the `.env` file.
 
@@ -41,35 +42,29 @@ Follow these steps to set up and run RiskAI on your local machine.
 - Collect all relevant banking documents that need to be analyzed. These could include risk assessments, financial statements, compliance records, etc.
 - Ensure files are in a format supported by RiskAI (e.g., PDF, DOCX, or plain text).
 
-**Create .env file**: Create a `.env` file in the root directory of your project with the following format and get all the keys from Supabase and Gemini:
-    ```bash
-    GOOGLE_GENAI_API_KEY=
-    NEXT_PUBLIC_SUPABASE_USERNAME= 
-    PW= 
-    NEXT_PUBLIC_SUPABASE_URL=
-    NEXT_PUBLIC_SUPABASE_ANON_KEY=
-    SERVICE_ROLE_KEY=
-    DIRECT_URL=
-    DATABASE_URL=
-    ```
+**Create .env file**: Create a `.env` file in the root directory of your project with the same format given in config_example.env and get all the keys from Supabase and Gemini:
 
 ### Initialise Prisma:
+
 Initialise Prisma with the following command:
-    ```bash
+`bash
     npx prisma init
     npx prisma generate
-    ```
+    `
 
 ### Run RiskAI:
+
 Start the Next.js app by running the main script:
-    ```bash
+`bash
     npm run dev
-    ```
+    `
 
 ### Site URL:
+
 The site will be available at [http://localhost:3000/](http://localhost:3000/).
 
 ### Login and Onboarding:
+
 - Go to the site and click on SignUp.
 - Enter the email and password.
 - After the email verification, go to login.
@@ -80,15 +75,18 @@ The site will be available at [http://localhost:3000/](http://localhost:3000/).
 - After the upload, you will be redirected to the dashboard.
 
 ### Train Your Model:
+
 - Go to the dashboard and go to the Train Model Section.
 - Upload more files if needed.
 - Click on the Train Model button.
 - It will take 15 seconds to 1 minute to train the model depending on the size of the files.
 
 ### View Codes on the Site
+
 - In the "Manage Code" section, you can view all the codes and their respective descriptions and criteria.
 
 ### Go to BSA-RSA
+
 - In the BSA-RSA section, you can view all the BSA-RSA codes and their respective descriptions and criteria.
 - Then just select the code you want to analyze the risk for and click on the submit button.
 
