@@ -54,7 +54,7 @@ const Page = ({
     isFetching({ ...data, fetching: true });
     const codeData = await deleteCodeWithBankId(params.bankId, code.code);
     if (codeData) {
-      console.log(codeData);
+      // console.log(codeData);
       toast({
         title: "Code Delete",
         description: "Your code is successfully Deleted!!",
@@ -69,7 +69,7 @@ const Page = ({
       const codesData = await getCodesWithId(params.bankId);
       if (codesData) {
         setCodes(codesData);
-        console.log(codesData);
+        // console.log(codesData);
       }
       setIsfetching(false);
       isFetching({ ...data, fetching: false });

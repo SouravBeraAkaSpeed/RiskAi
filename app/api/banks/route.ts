@@ -10,7 +10,7 @@ export async function GET(req: Request) {
 
     if (bankId) {
       console.log("bankID : ", bankId);
-      await db.$connect();
+      // await db.$connect();
       let banks = await db.bank.findUnique({
         where: {
           id: bankId,
@@ -24,7 +24,7 @@ export async function GET(req: Request) {
           codeAnalyses: true, // Include associated code analyses
         },
       });
-      await db.$disconnect();
+      // await db.$disconnect();
       // console.log(banks)
       if (!banks) {
         return new NextResponse("No banks found", { status: 200 });

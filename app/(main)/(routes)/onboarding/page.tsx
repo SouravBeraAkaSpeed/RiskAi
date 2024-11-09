@@ -24,17 +24,23 @@ const Page = () => {
       const bankdata = await getBank(state.user?.email!!);
       if (bankdata) {
         setBank(bankdata);
-        if (bankdata.status === "files_uploaded")
+        // console.log(bankdata)
+        if (bankdata.status === "files_uploaded") {
+          // console.log("hfvcb")
           router.push(`/dashboard/?${bankdata.id}`);
+        }
       }
       setIsLoading(false);
     };
     if (state.user) {
+
+      // console.log("fjdj")
       bankDetail();
     }
+
   }, [state.user]);
 
-  console.log("user:", state.user);
+  // console.log("user:", state.user);
   if (isLoading) {
     return (
       <div className="flex text-white flex-1 justify-center items-center h-[300px]">

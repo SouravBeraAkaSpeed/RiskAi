@@ -40,9 +40,9 @@ const LoginPage = () => {
     formData
   ) => {
     setLoading(true);
-    console.log("Enter");
+    // console.log("Enter");
     const { session } = await actionLoginUser(formData);
-    console.log("out");
+    // console.log("out");
     if (!session) {
       form.reset();
       setSubmitError("Error Occured while Logging , Check Your Email for Confirmation email!!");

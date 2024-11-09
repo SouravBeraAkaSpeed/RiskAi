@@ -1,7 +1,7 @@
 import { bank, code } from "@/types";
 import { create } from "zustand";
 
-export type ModalType = "addCode";
+export type ModalType = "addCode" | "addCustomer";
 
 interface ModalData {
   bank?: bank;

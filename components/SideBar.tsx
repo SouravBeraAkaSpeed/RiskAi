@@ -76,7 +76,7 @@ const SideBar = ({ bankId }: { bankId: string | undefined }) => {
       >
         <div className="flex flex-col  w-[300px] ">
           <Link href="/">
-            <div className="w-full  text-4xl font-bold flex items-center text-center justify-start ml-10 my-10 text-purple-900 ">
+            <div className="w-full  text-4xl font-bold flex items-center text-center justify-start  my-10 text-purple-900 ">
               {bankName.toUpperCase()}
             </div>
           </Link>
