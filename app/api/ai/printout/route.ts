@@ -87,7 +87,7 @@ export async function POST(req: NextRequest) {
     
 
     exec(
-      `python pdf_convertor.py  public/files/${body.bankName.replaceAll(
+      `python3 pdf_convertor.py  public/files/${body.bankName.replaceAll(
         " ",
         ""
       )}_PrintOut.txt --output public/files/${body.bankName.replaceAll(

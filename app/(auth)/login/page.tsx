@@ -73,7 +73,7 @@ const LoginPage = () => {
           justify-left
           items-center"
         >
-          <Image src={Logo} alt="2920wall Logo" width={100} height={100} />
+          {/* <Image src={Logo} alt="2920wall Logo" width={100} height={100} /> */}
           <span
             className="font-semibold
           dark:text-white text-2xl first-letter:ml-2"
