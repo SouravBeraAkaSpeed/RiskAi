@@ -81,7 +81,7 @@ const Page = ({
 
   return (
     <div className="flex flex-col justify-center w-full lg:px-[200px] px-[20px] py-[100px] ">
-      <div className="flex flex-col border-2 min-h-[400px]  rounded-[10px] shadow-lg shadow-purple-300 p-10">
+      <div className="flex flex-col border-2 min-h-[400px]  rounded-[10px] shadow-lg shadow-purple-300 p-5">
         <div className="flex w-full md:flex-row flex-col items-center md:space-x-10 ">
           <div className="text-xl font-bold md:flex-1 w-full">
             Codes
@@ -143,13 +143,13 @@ const Page = ({
             {codes.map((code: code, index) => (
               <div
                 key={index}
-                className="flex m-5 border-2 rounded-[20px] p-10 items-center shadow-xl"
+                className="flex m-5 border-2 rounded-[20px] p-8 items-center  justify-between shadow-xl"
               >
                 <div className="flex-1 flex-col ">
                   <div className="flex text-2xl font-bold">{code.code}</div>
                   <div className="flex text-gray-600">{code.riskCategory}</div>
                 </div>
-                <div className="flex px-10">
+                <div className="flex ">
                   <div
                     className="flex mx-2 cursor-pointer"
                     onClick={() =>

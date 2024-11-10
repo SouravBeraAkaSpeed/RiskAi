@@ -1,4 +1,5 @@
 "use server";
+import { toast } from "@/components/ui/use-toast";
 import { code } from "@/types";
 import axios from "axios";
 import fs from "fs";
@@ -11,7 +12,7 @@ async function processFilesSequentially(
   let analysis = "";
   for (const file of files) {
     try {
-      const res = await axios.post("http://localhost:3000/api/ai/interface_testing", {
+      const res = await axios.post("http://65.20.77.166/api/ai/interface_testing", {
         model: `${file}`,
         code: code,
         previous_analysis: previous_analysis ? previous_analysis : null,
@@ -60,6 +61,13 @@ export const getAnalysis = async (bankId: string, code: code) => {
     return file.includes(bankId);
   });
 
+
+  if (filter_files.length === 0) {
+    toast({
+      title: "No Files is Uploaded for Training yet"
+    })
+  }
+
   // const final_files = filter_files.map((file) => {
   //   return file.replace(`${bankId}_`, "");
   // });
@@ -74,6 +82,8 @@ export const getAnalysis = async (bankId: string, code: code) => {
   );
 
   const inherentRiskScoreRegex = /inherent_risk_score:\s*(\d+)/;
+
+
   const inherentRiskScoreMatch = res.match(inherentRiskScoreRegex);
   const inherentRiskScore = inherentRiskScoreMatch
     ? inherentRiskScoreMatch[1]

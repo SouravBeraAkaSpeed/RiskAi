@@ -33,8 +33,11 @@ const page = ({
       console.log(error);
     });
 
-    setBanksData(response);
-    setMessage("Loaded Successfully !!");
+    if (response) {
+
+      setBanksData(response);
+      setMessage("Loaded Successfully !!");
+    }
     console.log(response);
     setIsProcessing(false);
   };
@@ -49,12 +52,11 @@ const page = ({
     const bankName = (banksData as bank)?.name;
     let codeAnalysisData = "";
     for (const codeAnalysis of bank.codeAnalyses) {
-      codeAnalysisData += `analysis of Code : ${
-        codeAnalysis.code
-      } :  ${codeAnalysis.comments.replaceAll("\n", "")}`;
+      codeAnalysisData += `analysis of Code : ${codeAnalysis.code
+        } :  ${codeAnalysis.comments.replaceAll("\n", "")}`;
     }
 
-    const res = await axios.post("http://localhost:3000/api/ai/interface_printout", {
+    const res = await axios.post("/api/ai/interface_printout", {
       prompt: create_print_out_prompt(codeAnalysisData, bankName),
       bankName: bankName,
     });

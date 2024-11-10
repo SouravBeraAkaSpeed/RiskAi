@@ -1,6 +1,12 @@
 import axios from "axios";
 import { NextRequest, NextResponse } from "next/server";
 
+const allowedOrigins = [
+  "http://65.20.77.166",
+  "http://localhost:3000",
+  "http://localhost:3001",
+];
+
 export async function POST(req: NextRequest) {
   try {
     // const code_data= {code: "NRA",
@@ -13,7 +19,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
 
     console.log("body:", body);
-    const res = await axios.post("http://localhost:3000/api/ai/testing", {
+    const res = await axios.post("http://65.20.77.166/api/ai/testing", {
       model: body.model,
       code: body.code,
       stream: body.stream,
@@ -25,7 +31,12 @@ export async function POST(req: NextRequest) {
     // console.log(data);
 
     const r = NextResponse.json({ response });
-    r.headers.set("Access-Control-Allow-Origin", "http://localhost:3000");
+    const origin = req.headers.get("origin");
+    if (origin && allowedOrigins.includes(origin)) {
+      r.headers.set("Access-Control-Allow-Origin", origin);
+    }
+
+    // r.headers.set("Access-Control-Allow-Origin", "http://localhost:3000");
     r.headers.set("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
     r.headers.set(
       "Access-Control-Allow-Headers",
@@ -39,9 +50,13 @@ export async function POST(req: NextRequest) {
   }
 }
 
-export const OPTIONS = () => {
+export const OPTIONS = (req: Request) => {
   const response = NextResponse.json({});
-  response.headers.set("Access-Control-Allow-Origin", "http://localhost:3000");
+
+  const origin = req.headers.get("origin");
+  if (origin && allowedOrigins.includes(origin)) {
+    response.headers.set("Access-Control-Allow-Origin", origin);
+  }
   response.headers.set("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
   response.headers.set(
     "Access-Control-Allow-Headers",

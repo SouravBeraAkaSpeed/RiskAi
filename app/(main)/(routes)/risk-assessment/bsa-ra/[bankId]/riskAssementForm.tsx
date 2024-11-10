@@ -102,6 +102,9 @@ const code_names = [
   "SAR",
 ];
 
+
+
+
 const RiskAssementForm = ({
   data,
   selectedBankID: bankId,
@@ -181,7 +184,7 @@ const RiskAssementForm = ({
       }
     }
 
-    console.log("passed values:", data);
+    // console.log("passed values:", data);
 
     for (const code of data.codes) {
       setMessage("📂Assessing your data...");
@@ -254,9 +257,14 @@ const RiskAssementForm = ({
       console.log(error);
     });
 
-    console.log(response);
-    setBanksData(response);
-    setMessage("Loaded Successfully !!");
+    // console.log(response);
+    if (response) {
+
+      setBanksData(response);
+      setMessage("Loaded Successfully !!");
+    } else {
+      setMessage("Error Occurred!!");
+    }
 
     setIsProcessing(false);
   };
@@ -281,7 +289,7 @@ const RiskAssementForm = ({
       {(isLoading || isProcessing) && (
         <div className="z-10 fixed top-1/2 left-1/2 transform h-full w-full -translate-x-1/2 bg-opacity-80 bg-black text-2xl font-semibold   -translate-y-1/2 flex items-center justify-center">
           <Loader2 className="h-[50px] w-[50px] text-white animate-spin mr-2" />
-          <p className="text-[50px] text-white dark:text-zinc-400">{message}</p>
+          <p className="sm:text-[50px] text-md text-center  text-white dark:text-zinc-400">{message}</p>
         </div>
       )}
       <Form {...form}>
@@ -292,7 +300,7 @@ const RiskAssementForm = ({
               <TableHeader>
                 <TableRow>
                   {table_header.map((header, index) => (
-                    <TableHead key={index}>{header}</TableHead>
+                    <TableHead key={header}>{header}</TableHead>
                   ))}
 
                   {/* <TableHead className="text-center">Risk SubClasses</TableHead> */}
@@ -301,8 +309,9 @@ const RiskAssementForm = ({
               <TableBody>
                 {(banksData as bank)?.codes?.map((content, index) => (
                   <>
+                  
                     <TableRow
-                      key={index + content.code}
+                      key={content.code}
                       className="border-b-2 "
                     >
                       <TableCell className="align-top ">
@@ -310,34 +319,34 @@ const RiskAssementForm = ({
                           control={form.control}
                           name={
                             content.code as
-                              | "CB"
-                              | "NRA"
-                              | "IA"
-                              | "EM"
-                              | "MSB"
-                              | "TP"
-                              | "IG"
-                              | "HR"
-                              | "HRL"
-                              | "EB"
-                              | "SV"
-                              | "CI"
-                              | "CTR"
-                              | "LC"
-                              | "CO"
-                              | "FC"
-                              | "FBAR"
-                              | "P"
-                              | "PB"
-                              | "ND"
-                              | "FT"
-                              | "CBW"
-                              | "ACH"
-                              | "MI"
-                              | "LOC_C"
-                              | "NP"
-                              | "S"
-                              | "SAR"
+                            | "CB"
+                            | "NRA"
+                            | "IA"
+                            | "EM"
+                            | "MSB"
+                            | "TP"
+                            | "IG"
+                            | "HR"
+                            | "HRL"
+                            | "EB"
+                            | "SV"
+                            | "CI"
+                            | "CTR"
+                            | "LC"
+                            | "CO"
+                            | "FC"
+                            | "FBAR"
+                            | "P"
+                            | "PB"
+                            | "ND"
+                            | "FT"
+                            | "CBW"
+                            | "ACH"
+                            | "MI"
+                            | "LOC_C"
+                            | "NP"
+                            | "S"
+                            | "SAR"
                           }
                           render={({ field }) => (
                             <FormItem className="m-2 text-sm flex items-center justify-center ">
@@ -356,7 +365,7 @@ const RiskAssementForm = ({
                                 />
                               </FormControl>
                               <FormLabel className="mt-4 mx-3  items-center block w-full justify-center">
-                                {content.code}
+                              {content.code}
                               </FormLabel>
                               <FormMessage />
                             </FormItem>
@@ -526,7 +535,7 @@ const RiskAssementForm = ({
 
                     {selectedRows.includes(content.code as never) && (
                       <TableRow
-                        key={index + "sub_code"}
+                        
                         className="border-b-2 mx-10"
                       >
                         <TableCell colSpan={12} className="p-0">
@@ -569,8 +578,8 @@ const RiskAssementForm = ({
                               </TableRow>
                             </TableHeader>
                             <TableBody>
-                              {content.subclasses?.map((subcode, subIndex) => (
-                                <TableRow key={subIndex}>
+                              {content.subclasses?.map((subcode,index) => (
+                                <TableRow key={subcode.subcode}>
                                   <TableCell className="align-top">
                                     {subcode.subcode}
                                   </TableCell>

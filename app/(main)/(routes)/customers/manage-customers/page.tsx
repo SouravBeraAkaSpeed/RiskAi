@@ -23,8 +23,11 @@ const page = () => {
     const getCustomes = async () => {
       await getBanksData()
         .then((response) => {
+          if(response){
+
+            // setCustomers(response as customers[]);
+          }
           console.log(response);
-          setCustomers(response);
         })
         .catch((error: any) => {
           console.log(error);

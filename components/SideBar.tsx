@@ -50,7 +50,7 @@ const SideBar = ({ bankId }: { bankId: string | undefined }) => {
       if (bank) {
         setBankName(bank.name);
         setBank(bank);
-        console.log(bank.name);
+        // console.log(bank.name);
       }
 
       setIsLoading(false);

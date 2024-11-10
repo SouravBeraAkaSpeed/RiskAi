@@ -11,10 +11,12 @@ import {
 
 import RiskAssementForm from "./riskAssementForm";
 import { useEffect, useState } from "react";
-import { getBanksData } from "@/lib/bankData";
-import { code, customers } from "@/types";
 import { Loader2 } from "lucide-react";
 import { getCodesWithId } from "@/lib/supabase/queries";
+import { code } from "@/types";
+
+
+
 
 const page = ({
   params,

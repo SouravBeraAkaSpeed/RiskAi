@@ -2,13 +2,19 @@ import { exec } from "child_process";
 import axios from "axios";
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
-
-
 import {
   GoogleGenerativeAI,
   GenerateContentResult,
 } from "@google/generative-ai";
 import { PrintOutDataFormat } from "@/constant/riskAssesmentTableData";
+
+
+const allowedOrigins = [
+  "http://65.20.77.166",
+  "http://localhost:3000",
+  "http://localhost:3001",
+];
+
 
 const apiKey = process.env.GOOGLE_GENAI_API_KEY;
 if (!apiKey) {
@@ -115,7 +121,10 @@ export async function POST(req: NextRequest) {
     // console.log(data);
 
     const r = NextResponse.json({ aiResponse });
-    r.headers.set("Access-Control-Allow-Origin", "http://localhost:3001");
+    const origin = req.headers.get("origin");
+    if (origin && allowedOrigins.includes(origin)) {
+      r.headers.set("Access-Control-Allow-Origin", origin);
+    }
     r.headers.set("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
     r.headers.set(
       "Access-Control-Allow-Headers",
@@ -129,9 +138,13 @@ export async function POST(req: NextRequest) {
   }
 }
 
-export const OPTIONS = () => {
+export const OPTIONS = (req: Request) => {
   const response = NextResponse.json({});
-  response.headers.set("Access-Control-Allow-Origin", "http://localhost:3001");
+
+  const origin = req.headers.get("origin");
+  if (origin && allowedOrigins.includes(origin)) {
+    response.headers.set("Access-Control-Allow-Origin", origin);
+  }
   response.headers.set("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
   response.headers.set(
     "Access-Control-Allow-Headers",

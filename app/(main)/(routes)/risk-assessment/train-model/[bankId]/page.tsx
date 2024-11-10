@@ -160,7 +160,7 @@ const Page = ({
           </p>
         </div>
       )}
-      <Card className="w-1/2  flex items-center h-screen sm:h-auto  mt-10 shadow-indigo-500/50 shadow-lg bg-black text-white">
+      <Card className="w-[88%] justify-between  flex sm:flex-row flex-col items-center  sm:h-auto  mt-10 shadow-indigo-500/50 shadow-lg bg-black text-white">
         <CardHeader>
           <CardTitle>Upload Your Bank's files</CardTitle>
           <CardDescription>
@@ -244,7 +244,7 @@ const Page = ({
           <p className="text-xs text-white  ">Loading ...</p>
         </div>
       ) : (
-        <div className="flex flex-col w-1/2 my-10">
+        <div className="flex flex-col w-[88%] md:[70%] my-10">
           <div className="flex text-xl font-bold ">Uploaded Files</div>
 
           {files.map((file, index) => (

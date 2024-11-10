@@ -7,6 +7,13 @@ import {
   GenerateContentResult,
 } from "@google/generative-ai";
 
+const allowedOrigins = [
+  "http://65.20.77.166",
+  "http://localhost:3000",
+  "http://localhost:3001",
+];
+
+
 const apiKey = process.env.GOOGLE_GENAI_API_KEY;
 if (!apiKey) {
   throw new Error(
@@ -66,9 +73,14 @@ export async function POST(req: NextRequest) {
 }
 
 // Handle OPTIONS request for CORS
-export const OPTIONS = () => {
+
+export const OPTIONS = (req: Request) => {
   const response = NextResponse.json({});
-  response.headers.set("Access-Control-Allow-Origin", "http://localhost:3000");
+
+  const origin = req.headers.get("origin");
+  if (origin && allowedOrigins.includes(origin)) {
+    response.headers.set("Access-Control-Allow-Origin", origin);
+  }
   response.headers.set("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
   response.headers.set(
     "Access-Control-Allow-Headers",
@@ -77,6 +89,7 @@ export const OPTIONS = () => {
 
   return response;
 };
+
 
 // import { prompt_example, create_prompt } from "@/models/prompt_structure";
 // import axios from "axios";
