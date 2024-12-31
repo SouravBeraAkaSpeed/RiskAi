@@ -9,6 +9,7 @@ const allowedOrigins = [
   "http://65.20.77.166",
   "http://localhost:3000",
   "http://localhost:3001",
+  "https://riskai.vercel.app"
 ];
 
 export async function POST(req: NextRequest) {

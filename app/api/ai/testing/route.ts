@@ -11,6 +11,7 @@ const allowedOrigins = [
   "http://65.20.77.166",
   "http://localhost:3000",
   "http://localhost:3001",
+  "https://riskai.vercel.app"
 ];
 
 
@@ -57,7 +58,7 @@ export async function POST(req: NextRequest) {
     const response = NextResponse.json({ response: aiResponse });
     response.headers.set(
       "Access-Control-Allow-Origin",
-      "http://localhost:3000"
+      "https://riskai.vercel.app"
     );
     response.headers.set("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
     response.headers.set(
