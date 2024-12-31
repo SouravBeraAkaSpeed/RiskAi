@@ -43,9 +43,16 @@ const Page = () => {
   // console.log("user:", state.user);
   if (isLoading) {
     return (
-      <div className="flex text-white flex-1 justify-center items-center h-[300px]">
-        <Loader2 className="h-7 w-7 text-white  animate-spin my-4" />
-        <p className="text-xs text-white  ">&nbsp; Loading...</p>
+      <div className="flex flex-col text-white flex-1 justify-center items-center h-[300px]">
+        <div className="flex justify-center items-center">
+
+          <Loader2 className="h-7 w-7 text-white  animate-spin my-4" />
+          <p className="text-xs text-white  ">&nbsp; Loading...</p>
+        </div>
+        <div>
+
+          <span className="text-gray-500">refresh if it took more then 1 min</span>
+        </div>
       </div>
     );
   }
@@ -54,7 +61,7 @@ const Page = () => {
     <div
       className="bg-background
           h-screen
-          w-screen
+          w-[80%]
           flex
           flex-col
           justify-center

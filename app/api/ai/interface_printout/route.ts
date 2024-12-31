@@ -5,6 +5,12 @@ import { NextRequest, NextResponse } from "next/server";
 // import { jsPDF } from "jspdf";
 // import PDFKit from "pdfkit";
 
+const allowedOrigins = [
+  "http://65.20.77.166",
+  "http://localhost:3000",
+  "http://localhost:3001",
+];
+
 export async function POST(req: NextRequest) {
   try {
     // const code_data= {code: "NRA",
@@ -16,7 +22,7 @@ export async function POST(req: NextRequest) {
     //   "Significant number of NRA accounts from higher-risk geographies.",}
     const body = await req.json();
 
-    const res = await axios.post("http://localhost:3000/api/ai/printout", {
+    const res = await axios.post("http://65.20.77.166/api/ai/printout", {
       prompt: body.prompt,
       bankName: body.bankName,
     });
@@ -45,7 +51,10 @@ export async function POST(req: NextRequest) {
     // console.log(data);
 
     const r = NextResponse.json({ response });
-    r.headers.set("Access-Control-Allow-Origin", "http://localhost:3001");
+    const origin = req.headers.get("origin");
+    if (origin && allowedOrigins.includes(origin)) {
+      r.headers.set("Access-Control-Allow-Origin", origin);
+    }
     r.headers.set("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
     r.headers.set(
       "Access-Control-Allow-Headers",
@@ -58,10 +67,13 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(null);
   }
 }
-
-export const OPTIONS = () => {
+export const OPTIONS = (req: Request) => {
   const response = NextResponse.json({});
-  response.headers.set("Access-Control-Allow-Origin", "http://localhost:3001");
+
+  const origin = req.headers.get("origin");
+  if (origin && allowedOrigins.includes(origin)) {
+    response.headers.set("Access-Control-Allow-Origin", origin);
+  }
   response.headers.set("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
   response.headers.set(
     "Access-Control-Allow-Headers",

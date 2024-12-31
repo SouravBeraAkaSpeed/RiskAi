@@ -14,7 +14,7 @@ export const getBanksData = async (bankId: string = "") => {
 
   const response = await banks.data;
 
-  console.log(response)
+  // console.log(response)
   return response;
 
 };

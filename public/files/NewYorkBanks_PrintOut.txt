@@ -1,0 +1,652 @@
+## Inherent Risk Analysis Report for Bank New York Banks
+
+**1. BSA/Sanctions Risk Assessment Executive Summary:**
+
+This report presents the findings of the Bank Secrecy Act
+(BSA)/Anti-Money Laundering (AML) and Office of Foreign Assets Control
+(OFAC) Risk Assessment conducted for Bank New York Banks (BNY). The
+assessment was performed from January 1st to December 31st, 2024,
+utilizing the 2920 Wall Street AI-based Risk Assessment (RA) Tool and
+methodology. The analysis focused on identifying inherent risks and
+evaluating the effectiveness of existing control measures. It is
+important to note that the data used for this assessment was provided by
+BNY and assumed to be accurate and reliable. However, 2920 Wall Street
+did not independently verify this data. Therefore, the findings should
+be viewed as indicative of risk levels and not precise metrics.
+
+The analysis revealed a Moderate/High inherent risk for BSA/AML and a
+High inherent risk for OFAC, which are further detailed in the following
+sections. Notably, the assessment uncovered significant gaps in
+documentation related to Suspicious Activity Reporting (SAR) monitoring
+and procedures.  The lack of information suggests a potential absence of
+a centralized SAR monitoring process, automated systems, and a
+documented internal SAR referral system, indicating a high inherent risk
+in this area. Moreover, the document provided did not contain
+information about the presence or absence of Non-Resident Alien (NRA)
+accounts, making it impossible to assess the inherent risk or mitigating
+controls related to NRA customers.
+
+**1.1. About the Client:**
+
+BNY is a prominent financial institution with a substantial customer
+base and diverse product and service offerings.
+
+**1.2. Overview:**
+
+The objective of this risk assessment is to comprehensively evaluate
+BNY's inherent risks related to BSA/AML and OFAC compliance, as well as
+the effectiveness of existing control measures. Utilizing the 2920 Wall
+Street RA Tool, the assessment analyzed various risk categories,
+including:
+
+* **Customer:** This category encompasses aspects such as customer
+stability, customer type, and the potential for high-risk customers.
+* **Products and Services:** This category examines the inherent risks
+associated with different products and services offered by BNY,
+including online banking, electronic funds transfer, and lending.
+* **Transaction:** This category focuses on the potential risks related
+to transaction types, volumes, and the nature of financial activities.
+* **Geography:** This category assesses the risks posed by BNY's
+operations in different geographical locations, including high-risk
+areas and the involvement in cross-border transactions.
+* **Employee:** This category analyzes the potential risks associated
+with employee conduct, training, and internal controls.
+
+The assessment utilized a five-phase approach, which included: 
+
+* **Risk Identification and Evaluation:** This phase involved
+identifying and evaluating the various risk categories relevant to BNY's
+operations.
+* **Inherent Risk Analysis:**  This phase assessed BNY's exposure to
+inherent risks without considering any mitigating controls.
+* **Control and Mitigation Framework Assessment:** This phase examined
+the effectiveness of BNY's control mechanisms and strategies for
+mitigating identified risks.
+* **Overall Risk Rating Determination:** This phase synthesized the data
+from the previous phases to generate overall ratings for inherent risk,
+control effectiveness, and residual risk.
+* **Results Reporting and Review:** This phase included reviewing the
+preliminary findings with BNY's management and relevant officers to
+ensure accuracy and comprehensiveness.
+
+**1.3. Methodology of the AI-Based Risk Assessment Tool:**
+
+The 2920 Wall Street RA Tool employed a sophisticated methodology based
+on advanced algorithms and customized formulas to systematically assess
+and score the various dimensions of risk:
+
+* **Risk Identification and Scoring:** The tool began with a
+comprehensive identification of risk categories relevant to BNY's
+operations, examining the customer base, transaction types, product
+offerings, geographical locations, and other factors influencing BSA/AML
+and OFAC risks. Each risk category was then analyzed qualitatively and
+quantitatively to assign a preliminary Probability Score, reflecting the
+likelihood of risk occurrence based on BNY's risk profile.
+* **Inherent Risk Evaluation:** The tool calculated an Inherent Risk
+Score for each category based on factors like customer demographics,
+product risk levels, transaction volumes, and geographic exposure. This
+scoring helped identify areas of high vulnerability to money laundering,
+terrorist financing, sanctions, or fraud.
+* **Mitigation and Control Analysis:** The tool evaluated BNY's risk
+management framework, examining policies, procedures, and controls
+established to mitigate identified risks. Each control mechanism was
+scored against corresponding inherent risks to determine the
+effectiveness of BNY's risk mitigation strategies. This phase produced a
+Risk Mitigation and Controls Score for each risk category.
+* **Residual Risk Calculation:** The RA Tool synthesized data from the
+previous phases to derive a Residual Risk Score for each risk category.
+This score reflected the remaining risk level after applying BNY's
+mitigating controls.  The tool used custom-developed formulas to combine
+the scores of inherent risk and mitigating controls, thus determining
+the residual risk.
+* **Reporting and Analysis:** The tool generated detailed reports
+providing insights into BNY's risk profile, including scores and ratings
+for inherent, mitigating, and residual risks across all assessed
+categories. Analysts used these reports to discuss findings with BNY's
+management, ensuring accurate reflection of the risk landscape and
+facilitating informed decision-making.
+
+**1.4. Five-Phase Approach to BSA/AML and OFAC Risk Assessment:**
+
+This section details the specific steps taken during the five-phase
+approach to conducting the BSA/AML and OFAC Risk Assessment for BNY:
+
+* **Phase One: Risk Identification and Evaluation:**
+    * **Customer Base:**  The initial analysis focused on BNY's diverse
+customer base, including high-risk segments like Money Service
+Businesses (MSBs), non-governmental organizations (NGOs), and foreign
+entities.
+    * **Products and Services:**  The assessment considered BNY's
+diverse product and service offerings, particularly those with elevated
+BSA/AML risks, such as online banking and electronic funds transfer.
+    * **Transaction Types:**  The assessment considered the types of
+transactions BNY handles, including high-volume transactions,
+cross-border payments, and transactions involving high-risk countries or
+jurisdictions.
+    * **Geographical Footprint:**  The assessment took into account
+BNY's geographical footprint, including its branches and operations in
+high-risk areas or jurisdictions.
+    * **Customer Relationships:**  The assessment considered the nature
+of BNY's customer relationships, including those with politically
+exposed persons (PEPs) or entities with a history of regulatory
+scrutiny.
+
+* **Phase Two: Inherent Risk Analysis:**
+    * **Customer Base:** The assessment considered factors like the
+customer base's stability, diversity, and the presence of high-risk
+customers.
+    * **Products and Services:** The assessment evaluated the inherent
+risks associated with BNY's products and services, such as online
+banking, electronic funds transfer, and lending.
+    * **Transaction Types:** The assessment analyzed the inherent risks
+associated with various transaction types, including wire transfers,
+cash transactions, and international payments.
+    * **Geographical Footprint:** The assessment considered the inherent
+risks associated with BNY's operations in different regions, including
+high-risk countries or jurisdictions.
+    * **Employee Risk:** The assessment considered potential risks
+associated with employee conduct, such as bribery, fraud, and data
+breaches.
+
+* **Phase Three: Control and Mitigation Framework Assessment:**
+    * **Management Oversight and Governance:** The assessment evaluated
+the effectiveness of BNY's management oversight and governance
+structures in ensuring compliance with BSA/AML and OFAC regulations.
+    * **Know Your Customer (KYC) Program:**  The assessment reviewed
+BNY's KYC procedures, including customer due diligence processes,
+identity verification, and ongoing monitoring.
+    * **Anti-Money Laundering (AML) Controls:** The assessment evaluated
+the effectiveness of BNY's AML controls, including transaction
+monitoring systems, suspicious activity reporting procedures, and
+employee training.
+    * **Transaction Screening and Monitoring:** The assessment reviewed
+BNY's transaction screening and monitoring systems, including OFAC
+screening, BSA rules, and alert adjudication processes.
+    * **Customer Screening and Investigations:** The assessment reviewed
+BNY's customer screening processes, including watchlist checks and
+investigations in response to alerts.
+    * **Recordkeeping and Retention:**  The assessment evaluated BNY's
+recordkeeping practices and retention policies to ensure compliance with
+regulatory requirements.
+
+* **Phase Four: Overall Risk Rating Determination:**
+    * **Inherent Risk Rating:** This rating reflected the potential risk
+level for each category, based on the identified vulnerabilities.
+    * **Controls Rating:**  This rating evaluated the effectiveness of
+BNY's controls in mitigating the identified inherent risks.
+    * **Residual Risk Rating:** This rating reflected the remaining risk
+level after applying BNY's mitigating controls.
+
+* **Phase Five: Results Reporting and Review:**
+    * **Preliminary Findings Review:** The preliminary findings were
+discussed with BNY's management and relevant officers to ensure accuracy
+and completeness.
+    * **Draft Report Review:** A draft report was prepared and shared
+with BNY for further review and input.
+    * **Final Report Formalization and Distribution:**  After
+incorporating any necessary modifications, the final risk assessment
+report was formalized and distributed to relevant stakeholders.
+
+**1.5. Key Findings and Recommendations:**
+
+The risk assessment uncovered several key findings and recommendations
+for BNY to enhance its BSA/AML and OFAC compliance framework. These
+included:
+
+* **Uncovered Inherent Risks with Insufficient Documentation:** The
+assessment revealed that BNY's risk assessment submissions lacked
+sufficient documentation regarding SAR monitoring systems, policies, and
+procedures. This gap indicates a high inherent risk related to the
+bank's ability to effectively identify and report suspicious activities.
+* **Disproportionate Risk and Control Levels:**  The assessment revealed
+that the level of inherent risk in certain areas, such as SAR
+monitoring, was high, while the corresponding controls were inadequate.
+This disparity highlighted potential vulnerabilities in BNY's risk
+management strategy.
+* **Need for Enhanced Training and Awareness:** The assessment
+highlighted a need for enhanced training and awareness programs,
+particularly in areas of high inherent risk, to ensure all personnel are
+equipped with the necessary knowledge and tools to effectively manage
+these risks.
+* **Recommendations for System Model or Procedure Enhancements:**  The
+assessment recommended specific enhancements to address areas where the
+inherent risk was high and controls were insufficient, such as
+developing new system models to better detect and mitigate risks or
+revising existing procedures to strengthen the control environment.
+* **Strategic Recommendations for Risk Appetite Alignment:** The
+assessment provided strategic recommendations to align BNY's risk
+management practices with its risk appetite, suggesting adjustments to
+risk tolerance levels and implementing more stringent controls in areas
+of high inherent risk.
+
+**1.6. Uncovered Inherent Risks with Insufficient Documentation (Finding):**
+
+The lack of detailed information regarding SAR monitoring systems,
+policies, and procedures within the provided documents presents a
+significant concern. This absence suggests that BNY may not have a
+centralized SAR monitoring process, automated systems for identifying
+and reporting suspicious activities, or a documented internal SAR
+referral system. This gap indicates a high inherent risk for BSA/AML
+compliance.
+
+**1.7. Disproportionate Risk and Control Levels (Finding):**
+
+The absence of a robust SAR monitoring system and the lack of documented
+procedures for SAR reporting contribute to a significant disparity
+between the high inherent risk associated with this area and the
+inadequate control measures in place. This imbalance highlights
+potential vulnerabilities in BNY's risk management strategy and
+necessitates immediate attention.
+
+**1.8. Need for Enhanced Training and Awareness (Finding):**
+
+The assessment revealed a need for comprehensive employee training and
+awareness programs focusing on SAR reporting and related procedures.
+This training should equip staff with the necessary knowledge and skills
+to effectively identify, assess, and report suspicious activities.
+
+**1.9. Recommendations for System Model or Procedure Enhancements (Recommendation):**
+
+To mitigate the identified risks related to SAR monitoring, BNY should
+prioritize the following enhancements:
+
+* **Implementation of a Centralized SAR Monitoring System:** The bank
+should establish a centralized system to track, monitor, and manage SAR
+reporting activities. This system should be designed to automate key
+processes, such as alert generation, investigation management, and
+reporting.
+* **Development of Automated SAR Monitoring Systems:**  BNY should
+invest in automated SAR monitoring systems to identify and report
+suspicious activities with increased efficiency and accuracy. These
+systems should utilize sophisticated algorithms and data analytics to
+identify suspicious patterns and transactions.
+* **Creation of a Documented Internal SAR Referral System:**  BNY should
+develop a comprehensive internal SAR referral system with clear
+procedures for identifying, documenting, and escalating suspicious
+activities within the organization. This system should ensure that all
+employees understand their responsibilities regarding SAR reporting.
+
+**1.10. Strategic Recommendations for Risk Appetite Alignment (Recommendation):**
+
+BNY should undertake the following strategic recommendations to align
+its risk management practices with its risk appetite and mitigate the
+identified risks:
+
+* **Increased Investment in Risk Management Resources:** BNY should
+prioritize investment in additional personnel and resources to enhance
+its risk management capabilities, particularly in the area of BSA/AML
+compliance.
+* **Regular Risk Assessment Reviews:**  BNY should conduct regular
+reviews of its risk assessment framework to ensure its alignment with
+evolving regulatory requirements and industry best practices.
+* **Integration of Risk Management into Business Operations:** BNY
+should integrate risk management principles and practices into all
+aspects of its business operations, promoting a culture of compliance
+and vigilance.
+* **Proactive Monitoring of Regulatory Changes:** BNY should actively
+monitor regulatory changes and updates related to BSA/AML and OFAC
+compliance and proactively adapt its policies and procedures
+accordingly.
+
+**2. Risk Assessment Framework:**
+
+This section outlines the foundational structure of the risk assessment,
+including the goals, methods, operational units evaluated, and the basis
+of data utilized.
+
+**2.1. Objectives:**
+
+The primary objectives of conducting this risk assessment were to:
+
+* **Identify potential risks in BNY's operations related to BSA/AML and
+OFAC compliance:** This included identifying vulnerabilities in BNY's
+customer base, products and services, transactions, geographical
+footprint, and employee activities.
+* **Evaluate the effectiveness of BNY's existing control measures:**
+This involved assessing the adequacy and effectiveness of BNY's KYC
+program, AML controls, transaction screening and monitoring systems, and
+other risk mitigation strategies.
+* **Enhance BNY's overall risk management practices:** This included
+recommending improvements to BNY's policies, procedures, and systems to
+enhance its compliance framework and minimize its risk exposure.
+
+**2.2. Customer Base:**
+
+This section of the assessment focused on analyzing BNY's customer base,
+considering factors such as:
+
+* **Customer Stability:** The assessment examined the stability of BNY's
+customer base, considering factors such as customer churn rates and the
+frequency of account activity changes.
+* **Customer Type:** The assessment categorized BNY's customer base
+based on their risk profiles, including high-risk segments like MSBs,
+NGOs, and foreign entities.
+* **Customer Due Diligence:** The assessment evaluated the effectiveness
+of BNY's customer due diligence (CDD) processes, including the
+completeness and accuracy of customer identification and verification
+procedures.
+* **Geographic Distribution:** The assessment examined the geographical
+distribution of BNY's customer base, identifying potential
+concentrations in high-risk regions or jurisdictions.
+
+**2.3. Products:**
+
+This section of the assessment focused on evaluating the risks
+associated with BNY's products and services, considering factors such
+as:
+
+* **Product Complexity:** The assessment considered the complexity of
+BNY's products and services and their potential for facilitating money
+laundering or terrorist financing activities.
+* **Transaction Volume and Frequency:** The assessment examined the
+volume and frequency of transactions associated with different products
+and services, identifying any potential red flags.
+* **Customer Risk Profiles:** The assessment considered the risk
+profiles of customers utilizing different products and services,
+evaluating the potential for high-risk activities.
+
+**2.4. Geography:**
+
+This section of the assessment focused on analyzing the risks associated
+with BNY's operations in different geographical locations, considering
+factors such as:
+
+* **Regulatory Environment:** The assessment evaluated the regulatory
+environment in the jurisdictions where BNY operates, considering
+potential differences in BSA/AML and OFAC requirements.
+* **Presence of High-Risk Areas:** The assessment identified BNY's
+operations in high-risk areas or jurisdictions known for money
+laundering, terrorist financing, or sanctions violations.
+* **Cross-Border Transactions:** The assessment evaluated the volume and
+nature of BNY's cross-border transactions, identifying potential risks
+associated with international transactions.
+
+**3. Control Environment:**
+
+This section examines the organizational framework for managing and
+mitigating risks, including governance, customer due diligence, and
+compliance processes.
+
+**3.1. Management Oversight and Governance:**
+
+This section evaluated the role of senior management and governance
+structures in overseeing BNY's risk management and compliance efforts.
+It considered factors such as:
+
+* **Board Oversight:** The assessment evaluated the effectiveness of the
+board of directors' oversight of BNY's risk management and compliance
+program.
+* **Management Commitment:** The assessment evaluated the commitment of
+senior management to BSA/AML and OFAC compliance, including the
+allocation of resources and the implementation of effective controls.
+* **Compliance Structure:**  The assessment evaluated the structure of
+BNY's compliance department, including the adequacy of staffing,
+expertise, and resources.
+
+**3.2. Know Your Customer (KYC) Program:**
+
+This section detailed the processes and procedures in place for
+identifying and verifying the identity of customers as part of BNY's due
+diligence practices. It considered factors such as:
+
+* **Customer Onboarding:** The assessment evaluated the effectiveness of
+BNY's customer onboarding processes, including the collection and
+verification of customer identification documents.
+* **Customer Due Diligence (CDD) Procedures:** The assessment evaluated
+the completeness and effectiveness of BNY's CDD procedures, including
+the identification of beneficial owners, risk assessment, and ongoing
+monitoring.
+* **Enhanced Due Diligence (EDD):**  The assessment evaluated BNY's EDD
+procedures for high-risk customers, ensuring appropriate enhanced
+scrutiny.
+
+**3.3. Anti-Money Laundering (AML) Controls:**
+
+This section reviewed the systems and controls established to prevent,
+detect, and report money laundering activities. It considered factors
+such as:
+
+* **Transaction Monitoring Systems:** The assessment evaluated the
+effectiveness of BNY's transaction monitoring systems, including their
+ability to identify suspicious activity patterns and generate alerts.
+* **Suspicious Activity Reporting (SAR) Procedures:** The assessment
+evaluated BNY's SAR procedures, including the process for identifying,
+documenting, and reporting suspicious activities.
+* **Internal Controls:** The assessment evaluated the effectiveness of
+BNY's internal controls designed to mitigate money laundering risks,
+including segregation of duties, approval processes, and recordkeeping
+requirements.
+
+**3.4. Transaction Screening and Monitoring:**
+
+This section described the mechanisms for screening and monitoring
+transactions to identify and manage potential risks of financial crime
+and sanctions violations. It considered factors such as:
+
+* **OFAC Screening:** The assessment evaluated the effectiveness of
+BNY's OFAC screening processes, including the use of up-to-date
+sanctions lists and the ability to identify matches with customer data.
+* **BSA Rules:** The assessment evaluated the effectiveness of BNY's BSA
+rules, including their ability to identify suspicious patterns and
+transactions that might be indicative of money laundering or terrorist
+financing activities.
+* **Alert Adjudication:** The assessment evaluated BNY's alert
+adjudication processes, ensuring that alerts generated by the
+transaction monitoring systems are promptly investigated and
+appropriately escalated.
+
+**3.5. Customer Screening and Investigations:**
+
+This section outlined the procedures for screening customers against
+watchlists and conducting investigations in response to alerts. It
+considered factors such as:
+
+* **Watchlist Screening:** The assessment evaluated BNY's procedures for
+screening customers against OFAC sanctions lists and other relevant
+watchlists.
+* **Investigation Processes:**  The assessment evaluated BNY's processes
+for investigating suspicious activities, including gathering evidence,
+documenting findings, and escalating concerns to appropriate
+authorities.
+
+**3.6. Recordkeeping and Retention:**
+
+This section detailed the policies and practices for maintaining
+accurate records and retaining them for the required period to ensure
+regulatory compliance and facilitate audits. It considered factors such
+as:
+
+* **Recordkeeping Policies:** The assessment evaluated BNY's
+recordkeeping policies and procedures, ensuring that they comply with
+regulatory requirements.
+* **Record Retention Periods:** The assessment evaluated BNY's record
+retention periods, ensuring that they meet the requirements of BSA/AML
+and OFAC regulations.
+* **Data Security and Integrity:** The assessment evaluated BNY's data
+security and integrity measures, ensuring that records are protected
+from unauthorized access, modification, or disclosure.
+
+**3.7. Independent Testing and Regulatory Examinations:**
+
+This section explained the processes for conducting independent tests of
+the risk management framework and preparing for regulatory examinations.
+It considered factors such as:
+
+* **Independent Testing:** The assessment evaluated the effectiveness of
+BNY's independent testing processes, including the frequency, scope, and
+methodology of these reviews.
+* **Regulatory Examination Preparation:** The assessment evaluated BNY's
+processes for preparing for regulatory examinations, ensuring that the
+bank is adequately prepared to demonstrate compliance.
+
+**3.8. Residual Risk and Mitigation Strategies:**
+
+This section discussed the risks that remain after controls are applied
+and the strategies to further mitigate these residual risks. It
+considered factors such as:
+
+* **Residual Risk Assessment:** The assessment evaluated the level of
+residual risk remaining after applying BNY's mitigating controls,
+identifying any areas where further action is necessary.
+* **Mitigation Strategies:** The assessment identified specific
+mitigation strategies to further reduce residual risks, such as
+enhancing existing controls, implementing new procedures, or allocating
+additional resources.
+
+**4. Employee Training and Awareness:**
+
+This section details the training programs and initiatives designed to
+equip employees with the knowledge and skills necessary to comply with
+regulatory requirements and manage risks effectively. It considered
+factors such as:
+
+* **Training Content:**  The assessment evaluated the content of BNY's
+training programs, ensuring that they cover relevant topics, such as
+BSA/AML and OFAC regulations, KYC procedures, SAR reporting, and
+transaction monitoring.
+* **Training Delivery:** The assessment evaluated the delivery of BNY's
+training programs, ensuring that they are engaging and effective in
+imparting knowledge and skills to employees.
+* **Ongoing Training and Awareness:** The assessment evaluated BNY's
+ongoing training and awareness initiatives, ensuring that employees are
+kept up-to-date on evolving regulations and best practices.
+
+**5. Conclusion:**
+
+This section summarizes the key findings of the risk assessment and
+projects future trends and challenges in risk management and compliance.
+It provided a concise overview of the main insights and takeaways from
+the assessment, summarizing the critical elements discussed in the
+report.
+
+**Key Findings:**
+
+* BNY faces a Moderate/High inherent risk for BSA/AML and a High
+inherent risk for OFAC.
+* The assessment uncovered significant gaps in documentation related to
+SAR monitoring systems, policies, and procedures.
+* The lack of information suggests a potential absence of a centralized
+SAR monitoring process, automated systems, and a documented internal SAR
+referral system, indicating a high inherent risk in this area.
+* The document provided did not contain information about the presence
+or absence of Non-Resident Alien (NRA) accounts, making it impossible to
+assess the inherent risk or mitigating controls related to NRA
+customers.
+* The assessment highlighted a need for enhanced employee training and
+awareness programs focusing on SAR reporting and related procedures.
+
+**Recommendations:**
+
+* BNY should implement a centralized SAR monitoring system, develop
+automated SAR monitoring systems, and create a documented internal SAR
+referral system to mitigate the identified risks related to SAR
+monitoring.
+* BNY should increase investment in risk management resources, conduct
+regular risk assessment reviews, integrate risk management into business
+operations, and proactively monitor regulatory changes to align its risk
+management practices with its risk appetite.
+
+**Future Trends and Challenges:**
+
+* The regulatory landscape for BSA/AML and OFAC compliance continues to
+evolve, requiring BNY to remain vigilant and proactive in adapting its
+compliance framework to address new requirements and challenges.
+* The increasing use of technology and digital transactions creates new
+opportunities for financial crime, demanding that BNY develop robust
+systems and controls to effectively mitigate these risks.
+* The growth of cross-border transactions and the interconnectedness of
+the global financial system increases the complexity of BSA/AML and OFAC
+compliance, requiring BNY to strengthen its understanding of
+international regulatory frameworks.
+
+**6. Appendices:**
+
+**6.1. Appendix B: Supporting Documents:**
+
+The appendix will contain the following essential documents used to
+underpin the risk assessment analysis, which were provided by BNY:
+
+* **BSA/AML and OFAC Risk Assessment Methodology:**  This document
+details the approach used to evaluate the various elements contributing
+to the overall risk evaluation.
+* **BSA/AML and OFAC Risk Policies and Procedures:** This document
+outlines BNY's established frameworks and guidelines for managing
+compliance with BSA/AML and OFAC regulations.
+* **Customer Due Diligence Procedures:** This document details BNY's
+procedures for identifying and verifying customer identities, including
+the collection and verification of supporting documentation.
+* **Transaction Monitoring System (TMS) Reports:**  This document
+provides data and insights from BNY's TMS, highlighting transaction
+patterns, alerts, and investigations.
+* **Internal Audit Reports:**  This document presents the findings of
+internal audit reviews related to BNY's BSA/AML and OFAC compliance
+program.
+* **Regulatory Examination Reports:** This document provides insights
+into BNY's compliance with regulatory requirements, as assessed by
+external regulators.
+* **Other Relevant Documentation:** This category will include any other
+documents provided by BNY that support the risk assessment analysis,
+such as customer profiles, transaction histories, and relevant internal
+policies.
+
+**6.2. Example:**
+
+This section provides an example of how the RA Tool's methodology was
+applied to evaluate a specific risk category:
+
+**Customer Type Risk Overview:**
+
+The Client's inherent customer type risk was categorized as High, mainly
+due to its diverse membership base, including sectors with elevated
+BSA/AML vulnerabilities such as Money Service Businesses and
+non-resident entities. However, with proficient risk mitigation measures
+in place, the residual risk was adjusted to Moderate/High.
+
+**Risk Categories and Mitigation:**
+
+The Client systematically addresses risk through comprehensive
+screenings and controls. Daily screenings are conducted to align with
+updated OFAC lists, using a transaction monitoring system (TMS) for
+real-time updates and management of high-risk customer segments.
+
+**Risk Mitigation and Controls:**
+
+The Client's adherence to robust OFAC compliance policies includes
+routine screenings of existing and potential customers against various
+sanctions lists, ensuring comprehensive coverage of regulatory
+requirements. The TMS system is crucial for maintaining up-to-date
+screenings and managing alerts efficiently, ensuring that the Client's
+risk exposure is managed effectively.
+
+In terms of lending, thorough OFAC screenings are mandatory for all new
+loan applications, covering a wide range of parties involved in
+financial transactions. This extensive screening process extends to
+non-customers in specific scenarios, maintaining regulatory compliance
+and minimizing potential sanctions risks.
+
+**Regulatory Compliance and Documentation:**
+
+The Client maintains detailed records of all screening activities, with
+the TMS system playing a pivotal role in documenting and managing the
+screening processes. This diligent approach to record-keeping and
+sanctions screening ensures compliance with regulatory standards and
+supports the overall effectiveness of the Client's risk management
+strategy.
+
+**Conclusion:**
+
+The combination of comprehensive screening procedures, efficient use of
+technology, and diligent regulatory compliance practices has enabled the
+Client to manage its customer type risk effectively, achieving a
+residual risk rating of Moderate/High. This outcome reflects the
+Client's commitment to maintaining a robust risk management framework,
+aligning with best practices outlined in the Risk Assessment
+Methodology.
+
+This report provides a comprehensive overview of the BSA/AML and OFAC
+Risk Assessment conducted for BNY. The findings reveal areas requiring
+immediate attention, including the need for a robust SAR monitoring
+system, enhanced employee training, and alignment of risk management
+practices with BNY's risk appetite. By addressing these recommendations,
+BNY can strengthen its compliance framework, minimize its risk exposure,
+and maintain a strong reputation in the financial industry.

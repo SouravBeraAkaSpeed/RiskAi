@@ -2,6 +2,15 @@ import { db } from "@/lib/db";
 import { code } from "@/types";
 import { NextResponse } from "next/server";
 
+
+
+const allowedOrigins = [
+  "http://65.20.77.166",
+  "http://localhost:3000",
+  "http://localhost:3001",
+];
+
+
 export async function GET(req: Request) {
   try {
     const { searchParams } = new URL(req.url);
@@ -109,9 +118,43 @@ export async function PATCH(req: Request) {
       },
     });
 
-    return NextResponse.json(newBank);
+    const origin = req.headers.get("origin");
+
+    const successResponse = NextResponse.json(newBank);
+    if (origin && allowedOrigins.includes(origin)) {
+      successResponse.headers.set("Access-Control-Allow-Origin", origin);
+    }
+    successResponse.headers.set(
+      "Access-Control-Allow-Methods",
+      "POST, GET, OPTIONS"
+    );
+    successResponse.headers.set(
+      "Access-Control-Allow-Headers",
+      "Content-Type, Authorization"
+    );
+
+    return successResponse;
+
   } catch (error: any) {
     console.error(`Error uploading bank data: ${error.message}`);
     return new NextResponse("Internal Server Error", { status: 500 });
   }
 }
+
+
+
+export const OPTIONS = (req: Request) => {
+  const response = NextResponse.json({});
+
+  const origin = req.headers.get("origin");
+  if (origin && allowedOrigins.includes(origin)) {
+    response.headers.set("Access-Control-Allow-Origin", origin);
+  }
+  response.headers.set("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
+  response.headers.set(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Authorization"
+  );
+
+  return response;
+};

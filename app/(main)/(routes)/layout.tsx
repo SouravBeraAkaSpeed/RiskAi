@@ -26,7 +26,7 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
       <div className="flex w-full">
         <NavBar bankId={bank?.id} />
       </div>
-      <div className="flex flex-1">{children}</div>
+      <div className="flex flex-1 items-center justify-center">{children}</div>
     </div>
   );
 };

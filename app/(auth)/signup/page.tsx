@@ -108,7 +108,7 @@ const Signup = () => {
           justify-left
           items-center"
         >
-          <Image src={Logo} alt="co-lab ai Logo" width={100} height={100} />
+          {/* <Image src={Logo} alt="co-lab ai Logo" width={100} height={100} /> */}
           <span
             className="font-semibold
           dark:text-white text-2xl first-letter:ml-2"

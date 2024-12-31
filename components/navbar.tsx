@@ -17,7 +17,7 @@ const NavBar = ({ bankId }: { bankId: string | undefined }) => {
 
   return (
     <div className="flex w-full  shadow-xl border-b-2">
-      <div className="flex w-full m-5">
+      <div className="flex w-full m-3">
        
           <SideBar bankId={bankId} />
        
