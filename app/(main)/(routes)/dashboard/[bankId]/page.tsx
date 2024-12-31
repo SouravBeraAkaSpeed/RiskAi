@@ -1,5 +1,6 @@
 "use client";
 
+import RiskAnalysisCharts from "@/components/RiskAnalysisCharts";
 import TrainModel from "@/components/train-model";
 import { getAnalysis } from "@/lib/server-actions/ai-actions";
 import { getBankWithId } from "@/lib/supabase/queries";
@@ -42,7 +43,7 @@ const Page = ({
         <p className="text-xs text-white  ">&nbsp; Loading...</p>
       </div>
     );
-  return <TrainModel />;
+  return <RiskAnalysisCharts />;
 };
 
 export default Page;
