@@ -47,7 +47,7 @@ const Page = ({
   const onSearchCodeSubmit: SubmitHandler<
     z.infer<typeof SearchCodeSchema>
   > = async (value) => {
-    console.log(value);
+    // console.log(value);
   };
 
   const handleDelete = async (code: code) => {

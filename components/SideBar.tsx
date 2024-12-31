@@ -46,7 +46,7 @@ const SideBar = ({ bankId }: { bankId: string | undefined }) => {
     const fetchBank = async () => {
       setIsLoading(true);
       const bank = await getBankWithId(bankId!!);
-      console.log(bankId);
+      // console.log(bankId);
       if (bank) {
         setBankName(bank.name);
         setBank(bank);

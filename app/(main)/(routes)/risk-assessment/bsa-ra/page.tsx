@@ -21,7 +21,11 @@ const Page = async () => {
       },
     });
 
-    if (bank) redirect(`/risk-assessment/bsa-ra/${bank?.id}`);
+    if (bank) {
+      redirect(`/risk-assessment/bsa-ra/${bank?.id}`);
+    } else {
+      redirect(`/onboarding`);
+    }
   }
 
   return <Loader />;

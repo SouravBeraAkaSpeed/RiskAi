@@ -20,7 +20,11 @@ const DashBoard = async () => {
       },
     });
 
-    if (bank) redirect(`/dashboard/${bank?.id}`);
+    if (bank) {
+      redirect(`/dashboard/${bank?.id}`);
+    } else {
+      redirect(`/onboarding`);
+    }
   }
 
   return <Loader />;

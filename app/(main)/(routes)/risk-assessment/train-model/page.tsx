@@ -21,7 +21,11 @@ const Page = async () => {
       },
     });
 
-    if (bank) redirect(`/risk-assessment/train-model/${bank?.id}`);
+    if (bank) {
+      redirect(`/risk-assessment/train-model/${bank?.id}`);
+    } else {
+      redirect(`/onboarding`);
+    }
   }
 
   return <Loader />;

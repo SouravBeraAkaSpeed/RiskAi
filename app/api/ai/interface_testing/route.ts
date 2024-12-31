@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     //   "Significant number of NRA accounts from higher-risk geographies.",}
     const body = await req.json();
 
-    console.log("body:", body);
+    // console.log("body:", body);
     const res = await axios.post("http://65.20.77.166/api/ai/testing", {
       model: body.model,
       code: body.code,
@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
 
     return r;
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     return NextResponse.json(null);
   }
 }

@@ -93,7 +93,7 @@ export const SupabaseUserProvider: React.FC<SupabaseUserProviderProps> = ({
   };
 
   useEffect(() => {
-    console.log("User State Changed", state);
+    // console.log("User State Changed", state);
   }, [state]);
 
   useEffect(() => {

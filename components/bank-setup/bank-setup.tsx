@@ -70,7 +70,7 @@ const BankSetup: React.FC<BankSetupProps> = ({ bank }) => {
   const onFilesUploadSubmit: SubmitHandler<
     z.infer<typeof FileUploadFormSchema>
   > = async (formData) => {
-    console.log(formData);
+    // console.log(formData);
     setUploadingdocument(true);
 
     const filesData = formData.files.map((file) => {
@@ -81,7 +81,7 @@ const BankSetup: React.FC<BankSetupProps> = ({ bank }) => {
       };
     });
 
-    console.log(filesData);
+    // console.log(filesData);
     await uploadBankFiles(filesData).then((res) => {
       toast({
         title: "Files Uploaded",
@@ -131,7 +131,7 @@ const BankSetup: React.FC<BankSetupProps> = ({ bank }) => {
         });
       }
     } catch (error) {
-      console.log(error, "Error");
+      // console.log(error, "Error");
       toast({
         variant: "destructive",
         title: "Could not create your bank",

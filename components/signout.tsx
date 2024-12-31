@@ -9,7 +9,7 @@ const SignOut = () => {
   const router = useRouter();
   const handleSignOut = async () => {
     const response = await signOut();
-    console.log(response);
+    // console.log(response);
     if (response === null) {
       toast({
         title: "Signed Out",

@@ -51,7 +51,7 @@ export const UploadCodeModal = () => {
   const isLoading = form.formState.isSubmitting;
   const onSubmit = async (values: z.infer<typeof AddCodeFormSchema>) => {
     try {
-      console.log(values);
+      // console.log(values);
       isFetching({ ...data, fetching: true });
       const bank = await addCodes({
         codes: [values],
@@ -68,7 +68,7 @@ export const UploadCodeModal = () => {
       router.refresh();
       onClose();
     } catch (error) {
-      console.log("Error at axios: ", error);
+      // console.log("Error at axios: ", error);
     }
   };
 

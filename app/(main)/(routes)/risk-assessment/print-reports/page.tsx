@@ -21,7 +21,11 @@ const Page = async () => {
       },
     });
 
-    if (bank) redirect(`/risk-assessment/print-reports/${bank?.id}`);
+    if (bank) {
+      redirect(`/risk-assessment/print-reports/${bank?.id}`);
+    } else {
+      redirect(`/onboarding`);
+    }
   }
 
   return <Loader />;

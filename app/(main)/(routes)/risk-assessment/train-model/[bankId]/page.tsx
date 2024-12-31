@@ -61,7 +61,7 @@ const Page = ({
           };
         });
         setFiles(data);
-        console.log(data);
+        // console.log(data);
         setIsLoading(false);
       }
     };
@@ -132,7 +132,7 @@ const Page = ({
   const onFilesUploadSubmit: SubmitHandler<
     z.infer<typeof FileUploadFormSchema>
   > = async (formData) => {
-    console.log(formData);
+    // console.log(formData);
 
     const filesData = formData.files.map((file) => {
       return {
@@ -142,7 +142,7 @@ const Page = ({
       };
     });
 
-    console.log(filesData);
+    // console.log(filesData);
     await uploadBankFiles(filesData).then((res) => {
       toast({
         title: "Files Uploaded",

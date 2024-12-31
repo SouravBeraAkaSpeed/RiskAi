@@ -2,6 +2,7 @@
 import BankSetup from "@/components/bank-setup/bank-setup";
 import { useSupabaseUser } from "@/components/providers/supabase-user-provider";
 import { getBank } from "@/lib/supabase/queries";
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -21,7 +22,25 @@ const Page = () => {
 
   useEffect(() => {
     const bankDetail = async () => {
+
       const bankdata = await getBank(state.user?.email!!);
+      if (bankdata) {
+        setBank(bankdata);
+        // console.log(bankdata)
+        if (bankdata.status === "files_uploaded") {
+          // console.log("hfvcb")
+          router.push(`/dashboard/?${bankdata.id}`);
+        }
+      }
+      setIsLoading(false);
+    };
+
+    const bankDetail2 = async () => {
+      const supabase = createClientComponentClient();
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      const bankdata = await getBank(user?.email!!);
       if (bankdata) {
         setBank(bankdata);
         // console.log(bankdata)
@@ -36,6 +55,8 @@ const Page = () => {
 
       // console.log("fjdj")
       bankDetail();
+    } else {
+      bankDetail2()
     }
 
   }, [state.user]);

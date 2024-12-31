@@ -74,7 +74,7 @@ export const getAnalysis = async (bankId: string, code: code) => {
 
   let previous_analysis: string = "";
 
-  console.log("ANALYSING....");
+  // console.log("ANALYSING....");
   const res = await processFilesSequentially(
     filter_files,
     code,

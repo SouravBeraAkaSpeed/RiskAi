@@ -36,9 +36,9 @@ export const addCodeAnalysis = async (data: assesment) => {
 
     if (existingCodeAnalysis) {
       // Return a response indicating that the code is already associated
-      console.log(
-        `Code '${code}' is already associated with bankId '${bankId}'.`
-      );
+      // console.log(
+      //   `Code '${code}' is already associated with bankId '${bankId}'.`
+      // );
       return {
         message: `Code '${code}' is already associated with bankId '${bankId}'.`,
       };

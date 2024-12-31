@@ -196,7 +196,7 @@ const RiskAssementForm = ({
         setMessage("⌛ReChecking the Analysis...");
       }, 70000);
       getAnalysis(bankId, code).then((res) => {
-        console.log(res);
+        // console.log(res);
         setMessage(`✅${code.code} code Analysis Complete`);
         if (
           res.inherentRiskScore &&
@@ -254,7 +254,7 @@ const RiskAssementForm = ({
     setMessage("Loading Banks data...");
 
     const response = await getBanksData(bankId).catch((error) => {
-      console.log(error);
+      // console.log(error);
     });
 
     // console.log(response);

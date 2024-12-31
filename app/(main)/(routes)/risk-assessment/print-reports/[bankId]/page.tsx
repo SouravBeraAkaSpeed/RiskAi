@@ -30,7 +30,7 @@ const Page = ({
     setMessage("Loading Banks data...");
 
     const response = await getBanksData(params.bankId).catch((error) => {
-      console.log(error);
+      // console.log(error);
     });
 
     if (response) {
@@ -38,7 +38,7 @@ const Page = ({
       setBanksData(response);
       setMessage("Loaded Successfully !!");
     }
-    console.log(response);
+    // console.log(response);
     setIsProcessing(false);
   };
 
@@ -71,7 +71,7 @@ const Page = ({
       });
       setIsGenerated(true);
     }
-    console.log(data);
+    // console.log(data);
   };
 
   useEffect(() => {

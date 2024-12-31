@@ -19,7 +19,7 @@ const Page = ({
   useEffect(() => {
     const fetchBankStatus = async () => {
       const bank = await getBankWithId(params.bankId);
-      console.log(bank?.status);
+      // console.log(bank?.status);
       if (bank?.status !== "files_uploaded") return router.push(`/onboarding`);
       setIsLoading(false);
       // await getAnalysis(params.bankId, {

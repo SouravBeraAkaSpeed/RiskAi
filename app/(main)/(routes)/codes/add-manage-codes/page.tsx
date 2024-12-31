@@ -1,6 +1,6 @@
 import { db } from "@/lib/db";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { Loader } from "lucide-react";
+import Loader from "@/components/global/loader";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import React from "react";
@@ -21,7 +21,11 @@ const Page = async () => {
       },
     });
 
-    if (bank) redirect(`/codes/add-manage-codes/${bank?.id}`);
+    if (bank) {
+      redirect(`/codes/add-manage-codes/${bank?.id}`);
+    } else {
+      redirect(`/onboarding`);
+    }
   }
 
   return <Loader />;

@@ -38,7 +38,7 @@ export async function actionSignUpUser({
       emailRedirectTo: `https://riskai.vercel.app/api/auth/callback`,
     },
   });
-  console.log(response);
+  console.log("response:",response,response.error);
   if (!response.error) return { message: "success" };
   else
     return {
