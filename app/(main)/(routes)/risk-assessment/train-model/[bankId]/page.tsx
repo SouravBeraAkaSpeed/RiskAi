@@ -162,9 +162,9 @@ const Page = ({
       )}
       <Card className="w-1/2  flex items-center h-screen sm:h-auto  mt-10 shadow-indigo-500/50 shadow-lg bg-black text-white">
         <CardHeader>
-          <CardTitle>Upload Your Bank's files</CardTitle>
+          <CardTitle>Upload Your Bank&apos;s files</CardTitle>
           <CardDescription>
-            These files will be used for training of your bank's Ai model
+            These files will be used for training of your bank&apos;s Ai model
           </CardDescription>
         </CardHeader>
         <CardContent>
