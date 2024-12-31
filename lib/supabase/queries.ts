@@ -172,7 +172,7 @@ export const uploadBankFiles = async (
 
 export const getBankWithId = async (bankId: string) => {
   try {
-    console.log("bankId here:", bankId);
+    // console.log("bankId here:", bankId);
     if (bankId) {
       const bank = await db.bank.findFirst({
         where: {

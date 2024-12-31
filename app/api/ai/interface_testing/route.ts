@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
 
     // console.log("body:", body);
-    const res = await axios.post("http://65.20.77.166/api/ai/testing", {
+    const res = await axios.post("https://riskai.vercel.app/api/ai/testing", {
       model: body.model,
       code: body.code,
       stream: body.stream,

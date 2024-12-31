@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     //   "Significant number of NRA accounts from higher-risk geographies.",}
     const body = await req.json();
 
-    const res = await axios.post("http://65.20.77.166/api/ai/printout", {
+    const res = await axios.post("https://riskai.vercel.app/api/ai/printout", {
       prompt: body.prompt,
       bankName: body.bankName,
     });

@@ -12,7 +12,7 @@ async function processFilesSequentially(
   let analysis = "";
   for (const file of files) {
     try {
-      const res = await axios.post("http://65.20.77.166/api/ai/interface_testing", {
+      const res = await axios.post("https://riskai.vercel.app/api/ai/interface_testing", {
         model: `${file}`,
         code: code,
         previous_analysis: previous_analysis ? previous_analysis : null,
