@@ -18,7 +18,7 @@ import { code } from "@/types";
 
 
 
-const page = ({
+const Page = ({
   params,
 }: {
   params: {
@@ -66,4 +66,4 @@ const page = ({
   );
 };
 
-export default page;
+export default Page;
