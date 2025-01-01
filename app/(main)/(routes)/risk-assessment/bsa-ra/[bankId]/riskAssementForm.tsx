@@ -194,15 +194,15 @@ const RiskAssementForm = ({
 
       setTimeout(() => {
         setMessage("⌛ReChecking the Analysis...");
-      }, 70000);
+      }, 50000);
       getAnalysis(bankId, code).then((res) => {
-        // console.log(res);
-        setMessage(`✅${code.code} code Analysis Complete`);
+       
         if (
           res.inherentRiskScore &&
           res.residualRiskScore &&
           res.mitigatingControlScore
         ) {
+          setMessage(`✅${code.code} code Analysis Complete`);
           const assessment: assesment = {
             code: code.code,
             comments: res.reasoning ? res.reasoning : "",
@@ -240,9 +240,14 @@ const RiskAssementForm = ({
           });
         } else {
           toast({
-            title: "Nework Error occured during analysis",
-            description: `${code.code} Code Analysis Incomplete, Kindly perform the analysis again .`,
+            title: "Data insufficient for risk analysis.",
+            description: `${code.code} Code Analysis Incomplete, Kindly perform the analysis again with new data.`,
           });
+          setTimeout(() => {
+            setIsProcessing(false)
+            setMessage("🚫Data insufficient for risk analysis....");
+          }, 10000);
+
         }
       });
     }

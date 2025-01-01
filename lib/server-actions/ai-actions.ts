@@ -81,6 +81,8 @@ export const getAnalysis = async (bankId: string, code: code) => {
     previous_analysis
   );
 
+  // console.log("response",res)
+
   const inherentRiskScoreRegex = /inherent_risk_score:\s*(\d+)/;
 
 
@@ -108,10 +110,10 @@ export const getAnalysis = async (bankId: string, code: code) => {
   const reasoningMatch = res.match(reasoningRegex);
   const reasoning = reasoningMatch ? reasoningMatch[1].trim() : null;
 
-  console.log("Inherent Risk Score:", inherentRiskScore);
-  console.log("Mitigating Control Score:", mitigatingControlScore);
-  console.log("Document Used for Analysis:", documentUsedForAnalysis);
-  console.log("Reasoning:", reasoning);
+  // console.log("Inherent Risk Score:", inherentRiskScore);
+  // console.log("Mitigating Control Score:", mitigatingControlScore);
+  // console.log("Document Used for Analysis:", documentUsedForAnalysis);
+  // console.log("Reasoning:", reasoning);
 
   const residualRiskScore =
     inherentRiskScore !== null && mitigatingControlScore !== null
